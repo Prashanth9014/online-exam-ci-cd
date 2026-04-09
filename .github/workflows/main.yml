@@ -10,39 +10,36 @@ jobs:
 
     steps:
 
-    # 1. Get code
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # 2. Setup Node
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
 
-    # 3. Install & build frontend
+    # FRONTEND
     - name: Install frontend dependencies
       run: |
         cd client
-        npm install
+        npm ci
 
     - name: Build frontend
       run: |
         cd client
         npm run build
 
-    # 4. Install backend
+    # BACKEND
     - name: Install backend dependencies
       run: |
         cd server
-        npm install
+        npm ci
 
-    # 5. Run tests (AUTOMATION TESTING)
     - name: Run backend tests
       run: |
         cd server
         npm test
 
-    # 6. Deployment step (simulated)
+    # DEPLOY
     - name: Deploy Application
       run: echo "Deployment successful 🚀"

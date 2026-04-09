@@ -4,7 +4,7 @@
     "description": "Backend for Online Recruitment Process – Online Examination System",
     "main": "dist/server.js",
     "scripts": {
-        "test": "jest",
+        "test": "npx jest",
         "build": "tsc",
         "start": "node dist/server.js",
         "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
