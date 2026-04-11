@@ -1,3 +1,5 @@
+env:
+  NODE_ENV: test
 name: Full CI/CD Pipeline
 
 on:
