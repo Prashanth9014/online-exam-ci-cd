@@ -43,3 +43,5 @@ jobs:
     # DEPLOY
     - name: Deploy Application
       run: echo "Deployment successful 🚀"
+    - name: Deploy to Local Server
+      run: echo "Trigger deployment"
